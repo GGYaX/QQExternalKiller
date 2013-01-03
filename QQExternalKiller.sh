@@ -11,7 +11,7 @@ NAME=QQExternal
 ps ax | grep -v grep |grep $NAME | grep -oP "(?<= )[0-9]+ "
 case $? in
 	0)
-		ps ax | grep -v grep |grep $NAME | grep -oP "(?<= )[0-9]+ " | xargs kill
+		ps ax | grep -v grep |grep $NAME | grep -oP "^[0-9]+" | xargs kill
 	;;
 esac
 
